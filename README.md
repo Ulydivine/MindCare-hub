@@ -2,7 +2,7 @@
 
 A comprehensive mental health web application designed for African youth aged 16-30, providing a safe, accessible, and stigma-free platform for mental wellness support.
 
-## 🌟 Features
+##  Features
 
 - **Self-Assessment Tools**: Quick mental wellness checks to understand your current state
 - **Virtual Counseling**: Connect with licensed counselors from the comfort of your home
@@ -11,7 +11,7 @@ A comprehensive mental health web application designed for African youth aged 16
 - **Privacy & Security**: Your data is encrypted and identity is protected
 - **Licensed Professionals**: All counselors are certified and experienced
 
-## 🚀 Tech Stack
+##  Tech Stack
 
 - **Frontend**: React 18 with TypeScript
 - **Build Tool**: Vite
@@ -23,7 +23,7 @@ A comprehensive mental health web application designed for African youth aged 16
 - **Date Handling**: date-fns
 - **Calendar**: react-day-picker
 
-## 📦 Installation
+##  Installation
 
 ### Prerequisites
 
@@ -58,7 +58,7 @@ A comprehensive mental health web application designed for African youth aged 16
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 src/
@@ -85,7 +85,7 @@ src/
 └── index.css               # Global styles and Tailwind
 ```
 
-## 🎨 Design System
+##  Design System
 
 ### Color Palette
 
@@ -100,7 +100,7 @@ src/
 - **Base Size**: 16px
 - **Scale**: Responsive heading sizes with proper hierarchy
 
-## 🔐 Authentication
+##  Authentication
 
 The application uses a simple mock authentication system:
 
@@ -110,7 +110,7 @@ The application uses a simple mock authentication system:
 
 Authentication state is stored in localStorage for demo purposes.
 
-## 📱 Responsive Design
+##  Responsive Design
 
 - **Mobile-first approach**
 - **Breakpoints**: 
@@ -119,7 +119,7 @@ Authentication state is stored in localStorage for demo purposes.
   - lg: 1024px
 - **Adaptive layouts** for different screen sizes
 
-## 🌐 Pages Overview
+##  Pages Overview
 
 ### Public Pages
 - **Landing Page**: Introduction to the platform with features and testimonials
@@ -134,7 +134,7 @@ Authentication state is stored in localStorage for demo purposes.
 - **Resources**: Library of mental health articles, videos, and guides
 - **Profile**: User settings and activity history
 
-## 🧪 Mock Data
+##  Mock Data
 
 The application includes comprehensive mock data:
 
@@ -145,12 +145,10 @@ The application includes comprehensive mock data:
 - Mental health resources (articles, videos, guides)
 - Upcoming sessions and activity timeline
 
-## 🔧 Development Notes
-
-### State Management
-- Uses React hooks for local state management
-- No external state management library required for current scope
-- Authentication state persisted in localStorage
+##  Development Notes
+- Built using React with component-based architecture  
+- Uses mock data instead of real backend  
+- Focus on UI/UX and user experience  
 
 ### Form Validation
 - Client-side validation on all forms
@@ -164,12 +162,8 @@ The application includes comprehensive mock data:
 - Keyboard navigation support
 - WCAG AA compliance considerations
 
-## 🚀 Deployment
-
-### Build for Production
-```bash
-npm run build
-```
+##  Deployment
+The project can be deployed using Netlify, Vercel, or any static hosting platform.
 
 ### Preview Production Build
 ```bash
@@ -178,26 +172,19 @@ npm run preview
 
 The build output will be in the `dist` folder, ready for deployment to any static hosting service.
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## 📄 License
+- Virtual Counseling (Mock Feature using sample data)
+- Simulated Professionals (Demo purposes only)
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🆘 Crisis Support
+##  Crisis Support
 
 If you or someone you know is in immediate crisis:
 
 - **Rwanda Crisis Hotline**: +250798753665
 - **Available 24/7** for emergency support
 
-## 📞 Contact
+##  Contact
 
 - **Email**: support@mindcarehub.com
 - **Phone**: +250798753665
