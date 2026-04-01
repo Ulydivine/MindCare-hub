@@ -10,4 +10,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: '/MindCare-hub/', // GitHub Pages repository name
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+  },
 })
