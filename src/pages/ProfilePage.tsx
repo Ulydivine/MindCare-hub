@@ -18,15 +18,27 @@ import Footer from '../components/Footer'
 import { mockUser } from '../data/mockData'
 
 const ProfilePage: React.FC = () => {
+  // Get the logged-in user's email from localStorage
+  const userEmail = localStorage.getItem('userEmail') || 'user@example.com'
+  // Create a display name from the email (take the part before @)
+  const displayName = userEmail.split('@')[0].charAt(0).toUpperCase() + userEmail.split('@')[0].slice(1)
+  
+  // Create a dynamic user object based on logged-in user
+  const currentUser = {
+    ...mockUser,
+    name: displayName,
+    email: userEmail
+  }
+  
   const [activeTab, setActiveTab] = useState('personal')
   const [isEditing, setIsEditing] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
   const [formData, setFormData] = useState({
-    name: mockUser.name,
-    email: mockUser.email,
-    age: mockUser.age,
-    phone: mockUser.phone || '',
-    location: mockUser.location
+    name: currentUser.name,
+    email: currentUser.email,
+    age: currentUser.age,
+    phone: currentUser.phone || '',
+    location: currentUser.location
   })
   const [privacySettings, setPrivacySettings] = useState({
     anonymousMode: false,
@@ -48,11 +60,11 @@ const ProfilePage: React.FC = () => {
 
   const handleCancel = () => {
     setFormData({
-      name: mockUser.name,
-      email: mockUser.email,
-      age: mockUser.age,
-      phone: mockUser.phone || '',
-      location: mockUser.location
+      name: currentUser.name,
+      email: currentUser.email,
+      age: currentUser.age,
+      phone: currentUser.phone || '',
+      location: currentUser.location
     })
     setIsEditing(false)
   }

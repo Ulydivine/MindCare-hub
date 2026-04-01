@@ -21,6 +21,17 @@ import {
 } from '../data/mockData'
 
 const Dashboard: React.FC = () => {
+  // Get the logged-in user's email from localStorage
+  const userEmail = localStorage.getItem('userEmail') || 'User'
+  // Create a display name from the email (take the part before @)
+  const displayName = userEmail.split('@')[0].charAt(0).toUpperCase() + userEmail.split('@')[0].slice(1)
+  
+  // Create a dynamic user object based on logged-in user
+  const currentUser = {
+    ...mockUser,
+    name: displayName,
+    email: userEmail
+  }
   const quickActions = [
     {
       icon: Heart,
@@ -81,7 +92,7 @@ const Dashboard: React.FC = () => {
         {/* Welcome Section */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Welcome back, {mockUser.name}!
+            Welcome back, {currentUser.name}!
           </h1>
           <p className="text-gray-600">
             Here's your mental wellness overview for today
@@ -93,12 +104,12 @@ const Dashboard: React.FC = () => {
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-2xl font-semibold mb-2">
-                {mockUser.wellnessScore > 0 ? 'Your Wellness Score' : 'Take Your First Assessment'}
+                {currentUser.wellnessScore > 0 ? 'Your Wellness Score' : 'Take Your First Assessment'}
               </h2>
-              {mockUser.wellnessScore > 0 ? (
+              {currentUser.wellnessScore > 0 ? (
                 <>
                   <div className="flex items-baseline space-x-2">
-                    <span className="text-5xl font-bold">{mockUser.wellnessScore}</span>
+                    <span className="text-5xl font-bold">{currentUser.wellnessScore}</span>
                     <span className="text-2xl opacity-75">/10</span>
                   </div>
                   <p className="mt-4 opacity-90">
@@ -138,10 +149,10 @@ const Dashboard: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <p className="text-sm opacity-75">
-                    {mockUser.wellnessScore > 0 ? 'Last Assessment' : 'Not Started'}
+                    {currentUser.wellnessScore > 0 ? 'Last Assessment' : 'Not Started'}
                   </p>
                   <p className="font-semibold">
-                    {mockUser.wellnessScore > 0 ? '2 days ago' : 'Take your first assessment'}
+                    {currentUser.wellnessScore > 0 ? '2 days ago' : 'Take your first assessment'}
                   </p>
                 </div>
               </div>
